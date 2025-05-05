@@ -598,8 +598,8 @@ progress {
 }
 
 .img-fluid {
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
