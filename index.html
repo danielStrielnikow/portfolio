@@ -34,9 +34,10 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html" data-i18n="nav.resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><button id="lang-toggle" class="btn btn-outline-primary btn-sm">EN</button></li>
                 </ul>
             </div>
         </div>
@@ -48,12 +49,12 @@
                 <div class="col-xxl-5">
                     <!-- Header text content-->
                     <div class="text-center text-xxl-start">
-                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Java Developer</div></div>
-                        <div class="fs-3 fw-light text-muted">Java Developer</div>
-                        <h2 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Freelance Experience, Seeking Full-Time Opportunity</span></h2>
+                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase" data-i18n="hero.badge">Java Backend Developer</div></div>
+                        <div class="fs-3 fw-light text-muted" data-i18n="hero.role">Java Backend Developer</div>
+                        <h2 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline" data-i18n="hero.headline">Buduję systemy backendowe, które skalują się razem z biznesem</span></h2>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Resume</a>
-                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Projects</a>
+                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html" data-i18n="hero.btn.resume">Resume</a>
+                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html" data-i18n="hero.btn.projects">Projects</a>
                         </div>
                     </div>
                 </div>
@@ -186,17 +187,9 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-xxl-8">
                     <div class="text-center my-5">
-                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                        <p class="lead fw-light mb-4">
-                            I'm Daniel Strielnikow, a Junior Java Developer with hands-on experience in backend development
-                            using Spring Boot, Hibernate, and REST APIs.
-                        </p>
-                        <p class="text-muted">
-                            Currently working as a freelance developer on commercial projects including logistics platforms,
-                            digital passports, and VR applications. I'm seeking a full-time Junior Developer role to expand
-                            my experience in a collaborative team environment and contribute to impactful projects.
-                            <br><br>
-                        </p>
+                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline" data-i18n="about.title">O mnie</span></h2>
+                        <p class="lead fw-light mb-4" data-i18n="about.p1">Jestem Daniel Strielnikow — Java Backend Developer z doświadczeniem komercyjnym w budowaniu systemów rozproszonych, integracji usług i wytwarzaniu oprogramowania produkcyjnego.</p>
+                        <p class="text-muted" data-i18n="about.p2">Specjalizuję się w Java 17+, Spring Boot i architekturze mikroserwisów z wykorzystaniem Spring Cloud i Apache Kafka. Mam doświadczenie komercyjne przy projektach ERP i CRM obejmujących zarządzanie flotą, dostarczając systemy backendowe wspierane przez PostgreSQL, Redis i MongoDB, wdrażane przez pipeline CI/CD z Dockerem. Aktualnie buduję OMOM — wieloplatformowy marketplace z logiką wielosprzedawcową, zarządzaniem zamówieniami i integracją płatności, zaprojektowany jako modularny monolit z możliwością migracji do mikroserwisów. Poza pracą zawodową interesuję się IoT i systemami wbudowanymi — zbudowałem system telemetryczny dla BMW oparty na OBDII oraz system śledzenia czasu oparty na ESP32. Kieruję się podejściem inżynierskim: rozumiem problemy zanim je zoptymalizuję.</p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
                             <a class="text-gradient" href="https://www.linkedin.com/in/daniel-strielnikow-5559a5275/"><i class="bi bi-linkedin"></i></a>
                             <a class="text-gradient" href="https://github.com/danielStrielnikow"><i class="bi bi-github"></i></a>
@@ -210,16 +203,16 @@
     <section class="py-5 bg-gradient-primary-to-secondary text-white">
         <div class="container px-5 my-5">
             <div class="text-center">
-                <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                <p class="fs-3 fw-bold mb-3">Contact me</p>
+                <h2 class="display-4 fw-bolder mb-4" data-i18n="contact.headline">Zbudujmy coś razem</h2>
+                <p class="fs-3 fw-bold mb-3" data-i18n="contact.subheading">Skontaktuj się ze mną</p>
                 <p class="fs-5 mb-1">Email: <a href="mailto:daniel.strielnikow@outlook.com" class="text-white">daniel.strielnikow@outlook.com</a>
                 </p>
-                <p class="fs-5 mb-0">Phone: <a href="tel:+48782822793" class="text-white">+48 782 822 793</a></p>
             </div>
         </div>
     </section>
 </main>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

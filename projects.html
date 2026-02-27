@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Daniel Strielnikow's Projects - Commercial and personal Java projects including Digital Passport, SeeTrade LTD, Lornety VR, and Electri-Shop."/>
+    <meta name="description" content="Daniel Strielnikow's Projects - Commercial and personal Java projects including OMOM Marketplace, Digital Passport, SeeTrade LTD, Lornety VR, and IoT systems."/>
     <meta name="author" content="Daniel Strielnikow"/>
-    <meta name="keywords" content="Java Projects, E-commerce, Digital Passport, VR Application, Spring Boot, Web Development"/>
+    <meta name="keywords" content="Java Projects, E-commerce, Digital Passport, VR Application, Spring Boot, Web Development, IoT, OMOM Marketplace"/>
     <title>Projects - Daniel Strielnikow Portfolio</title>
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Projects - Daniel Strielnikow Portfolio" />
-    <meta property="og:description" content="Explore commercial and personal projects by Daniel Strielnikow, including e-commerce platforms, VR applications, and logistics solutions." />
+    <meta property="og:description" content="Explore commercial and personal projects by Daniel Strielnikow, including marketplace platforms, e-commerce systems, VR applications, and IoT devices." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Projects - Daniel Strielnikow Portfolio" />
     <!-- Favicon-->
@@ -29,154 +29,206 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span
-                    class="fw-bolder text-primary">Portfolio</span></a>
+            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Portfolio</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html" data-i18n="nav.resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><button id="lang-toggle" class="btn btn-outline-primary btn-sm">EN</button></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- commercial project Section-->
+
+    <!-- Commercial Projects Section-->
     <section class="py-5">
         <div class="container px-5 mb-5">
             <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Commercial Projects</span></h1>
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" data-i18n="projects.commercial.title">Projekty komercyjne</span></h1>
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <!-- Project Card 2-->
+
+                    <!-- OMOM Card -->
                     <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <div class="p-5">
-                                        <h2 class="fw-bolder">
-                                            Digital Passport
-                                        </h2>
-                                    <p>
-                                        <strong>Role:</strong> Backend Developer (Freelance)<br>
-                                        <strong>Technologies:</strong> Java, Spring Boot, PostgreSQL, REST APIs<br>
-                                        <strong>Description:</strong> Digital product passport platform aligning with EU regulations
-                                        requiring QR codes for manufactured products. Developed backend API for product registration,
-                                        QR code generation, and data retrieval.<br>
-                                        <strong>Key Contributions:</strong><br>
-                                        • Implemented RESTful API endpoints for product lifecycle management<br>
-                                        • Designed database schema for product data and sustainability metrics<br>
-                                        • Integrated third-party QR code generation library
-                                    </p>
-                                </div>
-                                <img class="img-fluid project-img" src="images/digital-passport.png" alt="Digital Passport platform screenshot"/>
-                            </div>
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1">OMOM — Marketplace</h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="omom.role">Backend Developer</span>
+                            </p>
+                            <p data-i18n="omom.desc">Mikroserwis odpowiedzialny za obsługę płatności w wieloplatformowym marketplace. Obejmuje kompletny przepływ płatności — od inicjacji przez Stripe do potwierdzenia zamówienia.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="omom.feat1">Integracja ze Stripe — przetwarzanie płatności, obsługa webhooków, zarządzanie payment intent</span><br>
+                                • <span data-i18n="omom.feat2">Synchronizacja statusu transakcji między bramką płatności a systemem zamówień</span><br>
+                                • <span data-i18n="omom.feat3">Zabezpieczony przepływ płatności z obsługą błędów i wsparciem dla zwrotów</span>
+                            </p>
                         </div>
                     </div>
-                    <!-- Project Card 2-->
+
+                    <!-- SeeTrade Card -->
                     <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <div class="p-5">
-                                    <a href="https://seetrade.eu/pl/" target="_blank">
-                                        <h2 class="fw-bolder">
-                                            SeeTrade LTD
-                                        </h2>
-                                    </a>
-                                    <p>
-                                        <strong>Role:</strong> Backend Developer (Freelance)<br>
-                                        <strong>Technologies:</strong> Java, Spring Boot, Hibernate, MySQL, WebSockets<br>
-                                        <strong>Description:</strong> Logistics platform connecting carriers with customers for vehicle
-                                        transport services. Enables real-time communication and competitive quote submission.<br>
-                                        <strong>Key Contributions:</strong><br>
-                                        • Developed backend services for order management and quote processing<br>
-                                        • Implemented WebSocket integration for real-time notifications<br>
-                                        • Created database models for carriers, customers, and transport requests
-                                    </p>
-                                </div>
-                                <img class="img-fluid project-img project-img-small" src="images/seetradeLogo-D3Ym0yxh.svg" alt="SeeTrade LTD logistics platform logo"/>
-                            </div>
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1"><a href="https://seetrade.htri.com.pl/pl/" target="_blank" class="card-title-link">SeeTrade LTD <i class="bi bi-box-arrow-up-right link-icon"></i></a></h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="st.role">Backend Developer</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> Java 17, Spring Boot 3, PostgreSQL, Redis
+                            </p>
+                            <p data-i18n="st.summary">Zaawansowane MVP platformy logistycznej do transportu pojazdów. Klienci składają zlecenia podając szczegóły pojazdu i trasy; przewoźnicy przeglądają dostępne zlecenia i je podejmują. System zarządza pełnym cyklem życia zlecenia — od złożenia, przez przydzielenie przewoźnika, po śledzenie statusu transportu.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="st.contrib1">Zaprojektowanie modelu domenowego: klienci, przewoźnicy, pojazdy, zlecenia transportowe</span><br>
+                                • <span data-i18n="st.contrib2">Implementacja logiki przydzielania przewoźników z pesymistycznym blokowaniem bazy danych (race condition przy równoczesnym podejmowaniu zlecenia)</span><br>
+                                • <span data-i18n="st.contrib3">Projektowanie REST API i optymalizacja zapytań SQL z indeksami złożonymi</span><br>
+                                • <span data-i18n="st.contrib4">Cache Redis dla danych referencyjnych z inwalidacją TTL</span>
+                            </p>
                         </div>
                     </div>
-                    <!-- Project Card 2-->
+
+                    <!-- Digital Passport Card -->
                     <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <div class="p-5">
-                                    <a href="https://rezerwat.muzarp.poznan.pl/pl/aplikacja-oka-czasu" target="_blank">
-                                        <h2 class="fw-bolder">
-                                            Lornety
-                                        </h2>
-                                    </a>
-                                    <p>
-                                        <strong>Role:</strong> Mobile Developer (Freelance)<br>
-                                        <strong>Technologies:</strong>Flutter , Unity for VR<br>
-                                        <strong>Client:</strong> Poznań City Hall<br>
-                                        <strong>Description:</strong> VR mobile application providing historical visualization of
-                                        Ostrów Tumski in Poznań from 11th and 16th centuries. Available on both Android and iOS.<br>
-                                        <strong>Key Contributions:</strong><br>
-                                        • Developed native mobile app integrating Unity VR engine<br>
-                                        • Implemented GPS-based location triggers for historical content<br>
-                                        • Optimized 3D asset loading for mobile performance
-                                    </p>
-                                </div>
-                                <img class="img-fluid project-img" src="images/xvi luneta.jpg" alt="Lornety VR mobile application screenshot"/>
-                            </div>
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1">Digital Passport</h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="dp.role">Backend Developer</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> Java, Spring Boot, PostgreSQL
+                            </p>
+                            <p data-i18n="dp.desc">Platforma cyfrowych paszportów produktowych zgodna z regulacjami UE wymagającymi kodów QR dla produkowanych wyrobów. Opracowałem backend API do rejestracji produktów, generowania kodów QR i pobierania danych.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="dp.feat1">Zaimplementowano endpointy RESTful API do zarządzania cyklem życia produktu</span><br>
+                                • <span data-i18n="dp.feat2">Zaprojektowano schemat bazy danych dla danych produktowych i metryk zrównoważonego rozwoju</span><br>
+                                • <span data-i18n="dp.feat3">Zintegrowano zewnętrzną bibliotekę do generowania kodów QR</span>
+                            </p>
                         </div>
                     </div>
+
+                    <!-- Lornety Card -->
+                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1"><a href="https://okaczasu.link/" target="_blank" class="card-title-link">Lornety <i class="bi bi-box-arrow-up-right link-icon"></i></a></h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="ln.role">Deweloper mobilny</span>
+                                &nbsp;·&nbsp;
+                                <strong data-i18n="label.client">Klient:</strong> <span data-i18n="ln.client">Urząd Miasta Poznania</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> Flutter, Unity for VR
+                            </p>
+                            <p data-i18n="ln.desc">Mobilna aplikacja VR prezentująca historyczną wizualizację Ostrowa Tumskiego w Poznaniu z XI i XVI wieku. Dostępna na Androida i iOS.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="ln.feat1">Opracowano natywną aplikację mobilną integrującą silnik Unity VR</span><br>
+                                • <span data-i18n="ln.feat2">Zaimplementowano wyzwalacze treści historycznych oparte na GPS</span><br>
+                                • <span data-i18n="ln.feat3">Zoptymalizowano ładowanie zasobów 3D dla wydajności mobilnej</span>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- Projects Section-->
+
+    <!-- Personal Projects Section-->
     <section class="py-5">
         <div class="container px-5 mb-5">
             <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Personal Projects</span></h1>
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" data-i18n="projects.personal.title">Projekty osobiste</span></h1>
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <!-- Project Card 2-->
+
+                    <!-- Electri-Shop Card -->
                     <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <div class="p-5">
-                                    <a href="https://verdant-tapioca-b788b1.netlify.app/" target="_blank">
-                                        <h2 class="fw-bolder">
-                                            Electri-Shop 
-                                        </h2>
-                                    </a>
-                                    <p>
-                                        <strong>Role:</strong> Full-Stack Developer (Personal Project)<br>
-                                        <strong>Technologies:</strong> Java, Spring Boot, Thymeleaf, MySQL, Bootstrap<br>
-                                        <strong>Description:</strong> Full-featured e-commerce platform with shopping cart,
-                                        order management, and purchase tracking.<br>
-                                        <strong>Key Features:</strong><br>
-                                        • Product catalog with search and filtering<br>
-                                        • Shopping cart with session management<br>
-                                        • Order processing and tracking system<br>
-                                        • Admin panel for inventory management
-                                    </p>
-                                </div>
-                                <img class="img-fluid project-img" src="images/Electri-shop-image.png" alt="Electri-Shop e-commerce platform screenshot"/>
-                            </div>
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1"><a href="https://github.com/danielStrielnikow/Electic-Shop-Microservice" target="_blank" class="card-title-link">Electri-Shop <i class="bi bi-github link-icon"></i></a></h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="es.role">Backend Developer (Projekt R&D)</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> Java 21, Spring Boot 3, Spring Cloud, Kafka, gRPC, PostgreSQL, MongoDB, Redis, Docker, GitHub Actions
+                            </p>
+                            <p data-i18n="es.summary">Projekt R&D eksplorujący projektowanie systemów rozproszonych na przykładzie platformy e-commerce. System 8 luźno powiązanych mikroserwisów komunikujących się synchronicznie przez REST i asynchronicznie przez Apache Kafka. Każdy serwis posiada własne źródło danych; wewnętrzne wywołania realizowane przez gRPC.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="es.resp1">Projektowanie architektury systemu i granic serwisów</span><br>
+                                • <span data-i18n="es.resp2">Implementacja REST API, kontraktów gRPC i transakcji rozproszonych (wzorzec Saga)</span><br>
+                                • <span data-i18n="es.resp3">Spójność danych przez idempotentnych konsumentów Kafka i zdarzenia kompensujące</span><br>
+                                • <span data-i18n="es.resp4">CI/CD z GitHub Actions, konteneryzacja wszystkich serwisów z Dockerem</span>
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- IoT & Embedded Systems Section-->
+    <section class="py-5">
+        <div class="container px-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" data-i18n="projects.iot.title">IoT i Systemy wbudowane</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+
+                    <!-- BMW Telemetry Card -->
+                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1">BMW Telemetry System</h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="iot.bmw.role">Twórca (Projekt IoT)</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> OBDII, CAN bus, WebSocket, Java
+                            </p>
+                            <p data-i18n="iot.bmw.desc">System diagnostyki pojazdu w czasie rzeczywistym zbudowany na protokole OBDII. Odczytuje dane na żywo z magistrali CAN — obroty, temperatura silnika, napięcie, kody błędów — i przesyła je przez WebSocket do panelu przeglądarki.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="iot.bmw.feat1">Parsowanie ramek OBDII i mapowanie PID</span><br>
+                                • <span data-i18n="iot.bmw.feat2">Strumieniowanie danych w czasie rzeczywistym przez WebSocket do live dashboardu</span><br>
+                                • <span data-i18n="iot.bmw.feat3">Odczyt i kasowanie kodów błędów (DTC)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ESP32 Time-Tracking Cube Card -->
+                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-5">
+                            <h2 class="fw-bolder mb-1"><a href="https://github.com/danielStrielnikow/Cuber_Timer" target="_blank" class="card-title-link">ESP32 Time-Tracking Cube <i class="bi bi-github link-icon"></i></a></h2>
+                            <p class="text-muted small mb-4">
+                                <strong data-i18n="label.role">Rola:</strong> <span data-i18n="iot.esp32.role">Twórca (Projekt IoT)</span>
+                                &nbsp;·&nbsp;
+                                <strong>Tech:</strong> ESP32, MPU-6050, WiFi, Java
+                            </p>
+                            <p data-i18n="iot.esp32.desc">Fizyczne urządzenie do śledzenia czasu: kostka oparta na ESP32, która wykrywa własną orientację i bezprzewodowo wysyła zdarzenia do backendu Java. Każda ściana kostki odpowiada innemu zadaniu lub projektowi.</p>
+                            <p class="fw-bold mb-1 mt-3" data-i18n="label.contrib">Kluczowe wkłady:</p>
+                            <p>
+                                • <span data-i18n="iot.esp32.feat1">Wykrywanie orientacji przez akcelerometr (MPU-6050)</span><br>
+                                • <span data-i18n="iot.esp32.feat2">Bezprzewodowa transmisja danych przez WiFi do REST API</span><br>
+                                • <span data-i18n="iot.esp32.feat3">Backend Java agregujący wpisy czasowe i generujący raporty</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
     <section class="py-5 bg-gradient-primary-to-secondary text-white">
         <div class="container px-5 my-5">
             <div class="text-center">
-                <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                <p class="fs-3 fw-bold mb-3">Contact me</p>
-                <p class="fs-5 mb-1">Email: <a href="mailto:daniel.strielnikow@outlook.com" class="text-white">daniel.strielnikow@outlook.com</a>
-                </p>
-                <p class="fs-5 mb-0">Phone: <a href="tel:+48782822793" class="text-white">+48 782 822 793</a></p>
+                <h2 class="display-4 fw-bolder mb-4" data-i18n="contact.headline">Zbudujmy coś razem</h2>
+                <p class="fs-3 fw-bold mb-3" data-i18n="contact.subheading">Skontaktuj się ze mną</p>
+                <p class="fs-5 mb-1">Email: <a href="mailto:daniel.strielnikow@outlook.com" class="text-white">daniel.strielnikow@outlook.com</a></p>
             </div>
         </div>
     </section>
@@ -184,5 +236,6 @@
 </main>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>
