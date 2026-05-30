@@ -29,8 +29,8 @@ var TRANSLATIONS = {
     en: "I'm Daniel Strielnikow — a Java Backend Developer with commercial experience building distributed systems, service integrations, and production-grade software."
   },
   'about.p2': {
-    pl: 'Specjalizuję się w Java 17+, Spring Boot i architekturze mikroserwisów z wykorzystaniem Spring Cloud i Apache Kafka. Mam doświadczenie komercyjne przy projektach  CRM obejmujących zarządzanie flotą, dostarczając systemy backendowe wspierane przez PostgreSQL, Redis i MongoDB, wdrażane przez pipeline CI/CD z Dockerem. Aktualnie buduję OMOM — wieloplatformowy marketplace z logiką wielosprzedawcową, zarządzaniem zamówieniami i integracją płatności. Poza pracą zawodową interesuję się IoT i systemami wbudowanymi — zbudowałem system telemetryczny dla BMW oparty na OBDII oraz system śledzenia czasu oparty na ESP32. Kieruję się podejściem inżynierskim: rozumiem problemy zanim je zoptymalizuję.',
-    en: 'I specialise in Java 17+, Spring Boot, and microservice architecture using Spring Cloud and Apache Kafka. I have commercial experience on CRM projects covering fleet management, delivering backend systems backed by PostgreSQL, Redis, and MongoDB, deployed through Docker-based CI/CD pipelines. I am currently building OMOM — a multi-vendor marketplace with vendor logic, order management, and payment integration. Outside commercial work I am interested in IoT and embedded systems — I built a BMW telemetry system using OBDII and a time-tracking device based on ESP32. I take an engineering mindset: I understand a problem before I optimise it.'
+    pl: 'Specjalizuję się w Java 21, Spring Boot i architekturze mikroserwisów z wykorzystaniem Apache Kafka i Spring Cloud. Mam doświadczenie komercyjne przy budowaniu systemów event-driven i przetwarzania danych w czasie rzeczywistym dla platform logistycznych i marketplace — backendów wspieranych przez PostgreSQL, Redis i Docker, wdrażanych przez pipeline CI/CD. Uczestniczyłem też w projekcie mobilnym (Flutter/Android/iOS) dla Urzędu Miasta Poznania. Poza pracą zawodową interesuję się IoT i systemami wbudowanymi — zbudowałem system telemetryczny dla BMW oparty na OBDII oraz urządzenie do śledzenia czasu oparte na ESP32. Kieruję się podejściem inżynierskim: rozumiem problemy zanim je zoptymalizuję.',
+    en: 'I specialise in Java 21, Spring Boot, and microservice architecture using Apache Kafka and Spring Cloud. I have commercial experience building event-driven systems and real-time data processing pipelines for logistics and marketplace platforms — backends backed by PostgreSQL, Redis, and Docker, deployed through CI/CD pipelines. I also contributed to a mobile project (Flutter/Android/iOS) for the City of Poznań. Outside commercial work I am interested in IoT and embedded systems — I built a BMW telemetry system using OBDII and a time-tracking device based on ESP32. I take an engineering mindset: I understand a problem before I optimise it.'
   },
 
   // ── Contact ────────────────────────────────────────────────────
@@ -45,12 +45,12 @@ var TRANSLATIONS = {
   // ── OMOM project card ─────────────────────────────────────────
   'omom.role': { pl: 'Backend Developer', en: 'Backend Developer' },
   'omom.desc': {
-    pl: 'Mikroserwis odpowiedzialny za obsługę płatności w wieloplatformowym marketplace. Obejmuje kompletny przepływ płatności — od inicjacji przez Stripe do potwierdzenia zamówienia.',
-    en: 'Microservice responsible for payment handling in a multi-vendor marketplace. Covers the complete payment flow — from Stripe initiation through to order confirmation.'
+    pl: 'Wieloplatformowy marketplace food & lifestyle oparty na mikroserwisach (.NET 10, Python/FastAPI, RabbitMQ). Klienci składają jeden zamówienie obejmujące wielu sprzedawców — system automatycznie dzieli płatność i zarządza cyklem życia zamówień.',
+    en: 'A multi-vendor food & lifestyle marketplace built on microservices (.NET 10, Python/FastAPI, RabbitMQ). Customers place a single order across multiple vendors — the system automatically splits payments and manages the full order lifecycle.'
   },
-  'omom.feat1': { pl: 'Integracja ze Stripe — przetwarzanie płatności, obsługa webhooków, zarządzanie payment intent', en: 'Stripe integration — payment processing, webhook handling, and payment intent management' },
-  'omom.feat2': { pl: 'Synchronizacja statusu transakcji między bramką płatności a systemem zamówień',                 en: 'Transaction status synchronisation between the payment gateway and the order system' },
-  'omom.feat3': { pl: 'Zabezpieczony przepływ płatności z obsługą błędów i wsparciem dla zwrotów',                    en: 'Secure payment flow with error handling and refund support' },
+  'omom.feat1': { pl: 'Integracja Stripe — jeden checkout dla całego koszyka z automatycznym podziałem środków między sprzedawców (Hangfire delayed jobs)', en: 'Stripe integration — single checkout for the full cart with automated fund splitting between vendors via Hangfire delayed jobs' },
+  'omom.feat2': { pl: 'System powiadomień dual-channel: email transakcyjny (MailKit/SMTP) i powiadomienia real-time przez SSE (Server-Sent Events) via RabbitMQ', en: 'Dual-channel notification system: transactional email (MailKit/SMTP) and real-time in-app notifications via SSE (Server-Sent Events) backed by RabbitMQ' },
+  'omom.feat3': { pl: 'Obsługa zwrotów, śledzenie statusu płatności i zarządzanie kontami sprzedawców w PostgreSQL',  en: 'Refund handling, payment status tracking, and vendor account management persisted in PostgreSQL' },
 
   // ── Digital Passport card ─────────────────────────────────────
   'dp.role': { pl: 'Backend Developer', en: 'Backend Developer' },
@@ -71,10 +71,10 @@ var TRANSLATIONS = {
   },
 
   'st.contrib.title': { pl: 'Moje zadania', en: 'My Contributions' },
-  'st.contrib1': { pl: 'Zaprojektowanie modelu domenowego: klienci, przewoźnicy, pojazdy, zlecenia transportowe', en: 'Designed domain model: customers, carriers, vehicles, transport orders' },
-  'st.contrib2': { pl: 'Implementacja logiki przydzielania przewoźników z pesymistycznym blokowaniem bazy danych (race condition przy równoczesnym podejmowaniu zlecenia)', en: 'Implemented carrier assignment logic with pessimistic database locking to handle concurrent order claims' },
-  'st.contrib3': { pl: 'Projektowanie REST API i optymalizacja zapytań SQL z indeksami złożonymi', en: 'Designed REST APIs and optimised SQL queries with composite indexes' },
-  'st.contrib4': { pl: 'Cache Redis dla danych referencyjnych z inwalidacją TTL', en: 'Redis caching for reference data with TTL-based invalidation' },
+  'st.contrib1': { pl: 'System powiadomień event-driven obsługujący 50+ typów zdarzeń — licznik nieprzeczytanych, paginowany feed, routing per rola użytkownika', en: 'Event-driven notification system handling 50+ event types — unread count tracking, paginated feed, per-role routing' },
+  'st.contrib2': { pl: 'Moduł zarządzania dokumentami — upload/download/delete plików (PDF, obrazy) z walidacją MIME, workflow zatwierdzania przez admina i event-driven aktualizacją statusu', en: 'Document management module — upload/download/delete for PDFs and images with MIME validation, admin approval workflow, and event-driven status updates' },
+  'st.contrib3': { pl: 'Panel admina do zarządzania cyklem życia zleceń i weryfikacji przewoźników w systemie trzech ról (Klient, Przewoźnik, Admin)', en: 'Admin panel for order lifecycle management and carrier verification in a three-role system (Client, Carrier, Admin)' },
+  'st.contrib4': { pl: 'Projektowanie REST API, modelowanie domeny i optymalizacja SQL z indeksami złożonymi; testy jednostkowe i integracyjne (JUnit, Mockito)', en: 'REST API design, domain modelling, and SQL optimisation with composite indexes; unit and integration tests (JUnit, Mockito)' },
 
   // ── Lornety card ──────────────────────────────────────────────
   'ln.role':   { pl: 'Deweloper mobilny', en: 'Mobile Developer' },
@@ -83,9 +83,9 @@ var TRANSLATIONS = {
     pl: 'Mobilna aplikacja VR prezentująca historyczną wizualizację Ostrowa Tumskiego w Poznaniu z XI i XVI wieku. Dostępna na Androida i iOS.',
     en: 'VR mobile application providing historical visualization of Ostrów Tumski in Poznań from 11th and 16th centuries. Available on both Android and iOS.'
   },
-  'ln.feat1': { pl: 'Opracowano natywną aplikację mobilną integrującą silnik Unity VR', en: 'Developed native mobile app integrating Unity VR engine' },
-  'ln.feat2': { pl: 'Zaimplementowano wyzwalacze treści historycznych oparte na GPS',   en: 'Implemented GPS-based location triggers for historical content' },
-  'ln.feat3': { pl: 'Zoptymalizowano ładowanie zasobów 3D dla wydajności mobilnej',    en: 'Optimized 3D asset loading for mobile performance' },
+  'ln.feat1': { pl: 'Przeglądarka panoram 360° z interaktywnymi hotspotami ładującymi modele 3D (.glb) przez ARCore/WebView (model_viewer_plus)', en: '360° panorama viewer with interactive hotspots loading 3D models (.glb) via ARCore/WebView (model_viewer_plus)' },
+  'ln.feat2': { pl: 'Synchronizacja contentu CMS przez HTTP — diffing manifestu plików, równoległe pobieranie z retry logic, tryb offline', en: 'HTTP-based CMS content sync — file manifest diffing, parallel downloads with retry logic, offline mode fallback' },
+  'ln.feat3': { pl: 'Odblokowywanie lokacji przez skanowanie kodów QR (mobile_scanner); optymalizacja pre-ładowania modeli 3D', en: 'QR-code gated location unlock flow (mobile_scanner); 3D model pre-loading optimisation for mobile performance' },
 
   // ── Electri-Shop card ─────────────────────────────────────────
   'es.role': { pl: 'Projekt własny — migracja monolit → mikroserwisy', en: 'Personal Project — monolith → microservices migration' },
@@ -129,16 +129,16 @@ var TRANSLATIONS = {
   'resume.skills.lang.title': { pl: 'Języki',                   en: 'Languages' },
 
   // ── OMOM experience entry (resume) ────────────────────────────
-  'exp.omom.period':   { pl: '02.2026 — obecnie',           en: '02.2026 — Present' },
+  'exp.omom.period':   { pl: '10.2025 — 04.2026',           en: '10.2025 — 04.2026' },
   'exp.omom.title':    { pl: 'Backend Developer (Projekt własny)', en: 'Backend Developer (Personal Project)' },
   'exp.omom.company':  { pl: 'OMOM Marketplace',            en: 'OMOM Marketplace' },
   'exp.omom.location': { pl: 'Zdalnie',                     en: 'Remote' },
-  'exp.omom.feat1':    { pl: 'Zaprojektowano architekturę modularnego monolitu z podziałem na konteksty domenowe', en: 'Designed modular monolith architecture with separated domain contexts' },
-  'exp.omom.feat2':    { pl: 'Zaimplementowano izolację danych per-tenant dla kont sprzedawców',                  en: 'Implemented per-tenant data isolation for vendor accounts' },
-  'exp.omom.feat3':    { pl: 'Zbudowano pipeline zamówień z integracją Redis i obsługą płatności',               en: 'Built order pipeline with Redis integration and payment handling' },
+  'exp.omom.feat1':    { pl: 'Integracja Stripe — jeden checkout dla całego koszyka z automatycznym podziałem środków między sprzedawców', en: 'Stripe integration — single checkout for the full cart with automated fund splitting between vendors' },
+  'exp.omom.feat2':    { pl: 'System powiadomień dual-channel: email transakcyjny (MailKit) i real-time SSE via RabbitMQ', en: 'Dual-channel notification system: transactional email (MailKit) and real-time SSE via RabbitMQ' },
+  'exp.omom.feat3':    { pl: 'Architektura 5 mikroserwisów (.NET 10, Python/FastAPI) z komunikacją przez RabbitMQ i MassTransit', en: '5-microservice architecture (.NET 10, Python/FastAPI) with inter-service communication via RabbitMQ and MassTransit' },
 
   // ── HTRI experience (resume) ──────────────────────────────────
-  'exp.htri.period':   { pl: '08.2025 — obecnie',         en: '08.2025 — Present' },
+  'exp.htri.period':   { pl: '08.2025 — 03.2026',         en: '08.2025 — 03.2026' },
   'exp.htri.title':    { pl: 'Backend Developer',  en: 'Backend Developer' },
   'exp.htri.company':  { pl: 'HTRI',                        en: 'HTRI' },
   'exp.htri.location': { pl: 'Zdalnie',          en: 'Remote' },
@@ -160,7 +160,7 @@ var TRANSLATIONS = {
   // ── Natural languages (resume) ────────────────────────────────
   'lang.polish':  { pl: 'Polski — Ojczysty', en: 'Polish — Native' },
   'lang.russian': { pl: 'Rosyjski — C1',     en: 'Russian — C1' },
-  'lang.english': { pl: 'Angielski — B1',    en: 'English — B1' }
+  'lang.english': { pl: 'Angielski — B1+',    en: 'English — B1+' }
 };
 
 function applyLang(lang) {
